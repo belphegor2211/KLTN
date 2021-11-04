@@ -95,7 +95,7 @@ class TextDatasetval():
         
         self.IMG_DATA = {}
 
-        base_path = r'C:\Users\minhb\Code\Handwriting-Transformers\dataset\IAM_32.pickle'
+        base_path = '/mydrive/MyDrive/khoa_luan/IAM_32.pickle'
         file_to_store = open(base_path, "rb")
         self.IMG_DATA = pickle.load(file_to_store)
         self.author_id = list(self.IMG_DATA.keys())[NUM_WRITERS:]
