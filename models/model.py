@@ -481,7 +481,7 @@ class TRGAN(nn.Module):
         self.KLD = 0 
 
 
-        with open(r'C:\Users\minhb\Code\Handwriting-Transformers\Lexicon\english_words.txt', 'rb') as f:
+        with open('/mydrive/MyDrive/khoa_luan/Lexicon/english_words.txt', 'rb') as f:
             self.lex = f.read().splitlines()
         lex=[]
         for word in self.lex:
