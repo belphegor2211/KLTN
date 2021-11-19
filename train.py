@@ -50,7 +50,7 @@ datasetval = torch.utils.data.DataLoader(
 
 model = TRGAN()
 
-MODEL_PATH = os.path.join('/mydrive/MyDrive/khoa_luan/saved_models', EXP_NAME)
+MODEL_PATH = os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_models', EXP_NAME)
 if os.path.isdir(MODEL_PATH) and RESUME: 
     model.load_state_dict(torch.load(MODEL_PATH+'/model.pth'))
     print (MODEL_PATH+' : Model loaded Successfully')
