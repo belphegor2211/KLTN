@@ -21,12 +21,12 @@ wandb.init(project="hwt", name = EXP_NAME)
 
 def init_project():
  
-    if not os.path.isdir('saved_images'): os.mkdir('saved_images')
-    if not os.path.isdir('saved_models'): os.mkdir('saved_models')
-    if os.path.isdir(os.path.join('saved_images', EXP_NAME)): shutil.rmtree(os.path.join('saved_images', EXP_NAME))
-    os.mkdir(os.path.join('saved_images', EXP_NAME))
-    os.mkdir(os.path.join('saved_images', EXP_NAME, 'Real'))
-    os.mkdir(os.path.join('saved_images', EXP_NAME, 'Fake'))
+    if not os.path.isdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_images'): os.mkdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_images')
+    if not os.path.isdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_models'): os.mkdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_models')
+    if os.path.isdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME)): shutil.rmtree(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME))
+    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME))
+    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME, 'Real'))
+    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME, 'Fake'))
 
 init_project()
 
