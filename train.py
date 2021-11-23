@@ -21,12 +21,12 @@ wandb.init(project="hwt", name = EXP_NAME)
 
 def init_project():
  
-    if not os.path.isdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_images'): os.mkdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_images')
-    if not os.path.isdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_models'): os.mkdir('/mydrive/MyDrive/khoa_luan/KLTN/saved_models')
-    if os.path.isdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME)): shutil.rmtree(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME))
-    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME))
-    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME, 'Real'))
-    os.mkdir(os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_images', EXP_NAME, 'Fake'))
+    if not os.path.isdir('/mydrive/MyDrive/french/KLTN/saved_images'): os.mkdir('/mydrive/MyDrive/french/KLTN/saved_images')
+    if not os.path.isdir('/mydrive/MyDrive/french/KLTN/saved_models'): os.mkdir('/mydrive/MyDrive/french/KLTN/saved_models')
+    if os.path.isdir(os.path.join('/mydrive/MyDrive/french/KLTN/saved_images', EXP_NAME)): shutil.rmtree(os.path.join('/mydrive/MyDrive/french/KLTN/saved_images', EXP_NAME))
+    os.mkdir(os.path.join('/mydrive/MyDrive/french/KLTN/saved_images', EXP_NAME))
+    os.mkdir(os.path.join('/mydrive/MyDrive/french/KLTN/saved_images', EXP_NAME, 'Real'))
+    os.mkdir(os.path.join('/mydrive/MyDrive/french/KLTN/saved_images', EXP_NAME, 'Fake'))
 
 init_project()
 
@@ -50,7 +50,7 @@ datasetval = torch.utils.data.DataLoader(
 
 model = TRGAN()
 
-MODEL_PATH = os.path.join('/mydrive/MyDrive/khoa_luan/KLTN/saved_models', EXP_NAME)
+MODEL_PATH = os.path.join('/mydrive/MyDrive/french/KLTN/saved_models', EXP_NAME)
 if os.path.isdir(MODEL_PATH) and RESUME: 
     model.load_state_dict(torch.load(MODEL_PATH+'/model.pth'))
     print (MODEL_PATH+' : Model loaded Successfully')
