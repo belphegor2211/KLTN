@@ -2,7 +2,7 @@ import torch
 
 ###############################################
 
-EXP_NAME = "RIMES"; RESUME = True
+EXP_NAME = "IAM-CC"; RESUME = True
 
 ###############################################
 
@@ -16,7 +16,8 @@ TN_NHEADS = 32
 TN_DIM_FEEDFORWARD = 512
 TN_ENC_LAYERS = 1
 TN_DEC_LAYERS = 1
-ALPHABET = """SuitemlrsachvpoIyMèfqC-dn'bjxgéJçzVD206A5EPBêâLû°9NT314àH8F7ôQYOZKî/GUXWRù%kw²Éëï"""
+#ALPHABET = """SuitemlrsachvpoIyMèfqC-dn'bjxgéJçzVD206A5EPBêâLû°9NT314àH8F7ôQYOZKî/GUXWRù%kw²Éëï"""
+ALPHABET = 'Only thewigsofrcvdampbkuq.A-210xT5\'MDL,RYHJ"ISPWENj&BC93VGFKz();#:!7U64Q8?+*ZX/%'
 VOCAB_SIZE = len(ALPHABET)
 G_LR = 0.0002
 D_LR = 0.0002
@@ -29,13 +30,13 @@ NUM_CRITIC_GWL_TRAIN = 2
 NUM_CRITIC_DWL_TRAIN = 1
 NUM_FID_FREQ = 100
 DATASET = ['RIMES']
-DATASET_PATHS = {'RIMES':'/mydrive/MyDrive/french/RIMES_32.pickle'}
+DATASET_PATHS = {'RIMES':'/mydrive/MyDrive/KLTN/IAM_32.pickle'}
 NUM_WRITERS = 1075
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IS_SEQ = True
 NUM_WORDS = 3
 if not IS_SEQ: NUM_WORDS = NUM_EXAMPLES
-IS_CC = False
+IS_CC = True
 IS_KLD = False
 ADD_NOISE = False
 ALL_CHARS = False
