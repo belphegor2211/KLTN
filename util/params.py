@@ -8,7 +8,7 @@ EXP_NAME = "IAM-CC"; RESUME = True
 
 IMG_HEIGHT = 32
 resolution = 16
-batch_size = 32
+batch_size = 16
 NUM_EXAMPLES = 50
 TN_HIDDEN_DIM = 512
 TN_DROPOUT = 0.1
